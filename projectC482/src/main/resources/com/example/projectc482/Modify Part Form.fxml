@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="ModifyPartFormWindow" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectc482.controller.ModifyPartFormController">
+    <children>
+        <Button fx:id="ModifyPartFormButtonCancel" layoutX="495.0" layoutY="488.0" mnemonicParsing="false" onAction="#OnCancelClick" prefHeight="25.0" prefWidth="61.0" text="Cancel" />
+        <Button fx:id="ModifyPartFormButtonSave" layoutX="437.0" layoutY="488.0" mnemonicParsing="false" onAction="#onCLick" text="Save" />
+        <Label fx:id="ModifyPartFormLabelModifyPart" layoutX="91.0" layoutY="95.0" text="Modify Part">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="ModifyPartFormRadInHouse" layoutX="235.0" layoutY="100.0" mnemonicParsing="false" onAction="#InHouseSelected" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="modParts" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="ModifyPartFormRadOutsourced" layoutX="433.0" layoutY="100.0" mnemonicParsing="false" onAction="#OutSourcedSelected" text="Outsourced" toggleGroup="$modParts" />
+        <Label fx:id="ModifyPartFormLabelID" layoutX="115.0" layoutY="181.0" text="ID" />
+        <Label fx:id="ModifyPartFormLabelName" layoutX="115.0" layoutY="233.0" prefHeight="17.0" prefWidth="50.0" text="Name" />
+        <Label fx:id="ModifyPartFormLabelInventory" layoutX="115.0" layoutY="285.0" text="Inventory" />
+        <Label fx:id="ModifyPartFormLabelPriceCost" layoutX="115.0" layoutY="337.0" text="Price/Cost" />
+        <Label fx:id="ModifyPartFormLabelMax" layoutX="115.0" layoutY="393.0" prefHeight="17.0" prefWidth="28.0" text="Max" />
+        <Label fx:id="ModifyPartFormLabelMachID" layoutX="115.0" layoutY="444.0" text="Machine ID" />
+        <Label fx:id="ModifyPartFormLabelMin" layoutX="377.0" layoutY="393.0" prefHeight="17.0" prefWidth="28.0" text="Min" />
+        <TextField fx:id="ModifyPartFormTFID" disable="true" editable="false" layoutX="209.0" layoutY="177.0" prefHeight="25.0" prefWidth="156.0" promptText="ID">
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor></TextField>
+        <TextField fx:id="ModifyPartFormTFMin" layoutX="417.0" layoutY="389.0" prefHeight="25.0" prefWidth="156.0" />
+        <TextField fx:id="ModifyPartFormTFName" layoutX="209.0" layoutY="229.0" prefHeight="25.0" prefWidth="156.0" />
+        <TextField fx:id="ModifyPartFormTFInventory" layoutX="209.0" layoutY="281.0" prefHeight="25.0" prefWidth="156.0" />
+        <TextField fx:id="ModifyPartFormTFPriceCost" layoutX="209.0" layoutY="333.0" prefHeight="25.0" prefWidth="156.0" />
+        <TextField fx:id="ModifyPartFormTFMax" layoutX="209.0" layoutY="389.0" prefHeight="25.0" prefWidth="156.0" />
+        <TextField fx:id="ModifyPartFormTFMachID" layoutX="209.0" layoutY="440.0" prefHeight="25.0" prefWidth="156.0" />
+    </children>
+</AnchorPane>
